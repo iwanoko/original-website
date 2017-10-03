@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-image: url(black-thread-light.png);
+}
+
+#header {
+    top: 0;
+    width: 100%;
+    height: 130px;
+    background-blend-mode: overlay;
+    background: rgba(158, 170, 255, 0.1) url(triangular.png);
+    padding: 0px 2%;
+    position: fixed;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.left-nav {
+    width: 48%;
+    float: left;
+}
+
+h1 {
+    color: #fff;
+    position: absolute;
+    display: block;
+    font-weight: bold;
+    /*太字に*/
+    font-size: 6em;
+    /*サイズ2倍*/
+}
+
+#header img {
+    width: 265px;
+    /* transform: translateX(360px); */
+    filter: invert(100%);
+    margin-top: 40px;
+    margin-left: 360px;
+    transform: rotate(-10deg);
+}
+
+.containernav {
+    height: 130px;
+    float: left;
+    width: 48%;
+}
+
+
+/*
+      #header img {
+          width: 30%;
+          float: left;
+          filter: invert(100%);
+*/
+
+
+}
+nav {
+    overflow: hidden;
+    text-align: center;
+    float: left;
+    width: 50%;
+    z-index: 1;
+}
+ul {
+    width: 100%;
+    overflow: hidden;
+}
+nav li {
+    line-height: 130px;
+    width: 20%;
+    list-style-type: none;
+    float: left;
+    display: block;
+    text-align: center;
+}
+nav a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #f9f9f9;
+}
+.containernarrow {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 16px;
+}
+.toptitle {
+    font-size: 55px;
+    padding-left: 8px;
+    color: #696969;
+    font-weight: 400;
+    text-align: center;
+}
+.amatic {
+    font-family: 'Amatic SC', cursive;
+}
+.line:first-child {
+    /* margin-top: 50px; */
+}
+.line img {
+    width: 230px;
+    display: block;
+    margin: auto;
+    filter: invert(40%);
+}
+.blank {
+    margin-top: 140px;
+}
+svg {
+    display: block;
+    margin: 0 auto;
+}
+path {
+    fill: #5fd35f;
+    stroke: #165016;
+    stroke-width: 1;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+path:hover {
+    fill: #3BC0C7;
+}
