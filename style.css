@@ -11,7 +11,7 @@ body {
 #header {
     top: 0;
     width: 100%;
-    height: 130px;
+    height: 100px;
     background-blend-mode: overlay;
     background: rgba(158, 170, 255, 0.1) url(triangular.png);
     padding: 0px 2%;
@@ -21,7 +21,7 @@ body {
 }
 
 .left-nav {
-    width: 48%;
+    width: 50%;
     float: left;
 }
 
@@ -31,23 +31,30 @@ h1 {
     display: block;
     font-weight: bold;
     /*太字に*/
-    font-size: 6em;
+    font-size: 5em;
     /*サイズ2倍*/
+    line-height: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 22px;
+    }
 }
 
 #header img {
-    width: 265px;
+    width: 200px;
     /* transform: translateX(360px); */
     filter: invert(100%);
-    margin-top: 40px;
-    margin-left: 360px;
+    margin-top: 30px;
+    margin-left: 310px;
     transform: rotate(-10deg);
 }
 
 .containernav {
-    height: 130px;
+    height: 100px;
     float: left;
-    width: 48%;
+    width: 44%;
 }
 
 
@@ -72,23 +79,27 @@ ul {
     overflow: hidden;
 }
 nav li {
-    line-height: 130px;
+    line-height: 100px;
     width: 20%;
     list-style-type: none;
     float: left;
     display: block;
-    text-align: center;
+    text-align: right;
+}
+nav li a:hover {
+    color: #81E2DF;
 }
 nav a {
-    font-size: 25px;
+    font-size: 35px;
     text-decoration: none;
     color: #f9f9f9;
+    font-weight: 700;
 }
 .containernarrow {
     width: 1000px;
     margin: 0 auto;
     overflow: hidden;
-    padding: 16px;
+    padding: 100px;
 }
 
 /*  #header {
@@ -110,19 +121,32 @@ nav a {
           margin-bottom: 32px;
       }
 */
+.mainvidual {
+    width: 100%;
+    height: 100vh;
+}
+.photo-show {
+    min-width: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+}
+
+/*
 .photo-show {
     width: 100%;
     height: 100vh;
     background-size: cover;
     margin-bottom: 32px;
 }
+*/
 .photo-show img {
     animation: show 16s infinite;
     -webkit-animation: show 16s infinite;
-    width: 100%;
-    background-size: cover;
-    margin-bottom: 32px;
+    min-width: 100%;
     opacity: 0;
+    top: 0;
+    left: 0;
     position: absolute;
     /*画像を全て重ねる*/
 }
@@ -203,13 +227,27 @@ nav a {
     -webkit-transition: 0.2s;
 }
 .line img {
-    width: 300px;
+    width: 200px;
     display: block;
     margin: auto;
     filter: invert(40%);
 }
 .blank30 {
     margin-bottom: 30px;
+}
+.toptitle {
+    font-size: 60px;
+    padding-left: 8px;
+    margin-bottom: 5px;
+    color: #696969;
+    font-weight: 400;
+    text-align: center;
+}
+.amatic {
+    font-family: 'Amatic SC', cursive;
+}
+#main {
+    float: left;
 }
 .content {
     width: 300px;
@@ -242,24 +280,23 @@ nav a {
     color: #fff;
     text-align: center;
     position: relative;
-    font-size: 17px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 37px;
     background: rgba(105, 105, 105, 0.8);
-    margin: 20px 0 0 0
+    margin: 0
 }
 .view p {
-    font-family: Georgia, serif;
     font-size: 12px;
     position: relative;
     color: #fff;
-    padding: 10px 20px 20px;
-    text-align: center
+    padding: 35px 40px 30px;
+    text-align: left;
 }
 .view a.info {
     display: inline-block;
     text-decoration: none;
     padding: 7px 14px;
-    background: #000;
+    background: #696969;
     color: #fff;
     text-transform: uppercase;
     box-shadow: 0 0 1px #000
@@ -267,42 +304,17 @@ nav a {
 .view a.info:hover {
     box-shadow: 0 0 5px #000
 }
-.mainvidual {
-    position: relative;
-}
-.toptitle {
-    font-size: 70px;
-    padding-left: 8px;
-    margin-bottom: 16px;
-    color: #696969;
-    font-weight: 400;
-    text-align: center;
-}
-#main {
-    float: left;
-}
-.amatic {
-    font-family: 'Amatic SC', cursive;
-}
-
-/* 画面外にいる状態 */
-.fadein {
-    opacity: 0.1;
-    transform: translate(0, 80px);
-    transition: all 0.8s;
-}
-
-/* 画面内に入った状態 */
-.fadein.scrollin {
-    opacity: 1;
-    transform: translate(0, 0);
-}
 .view-first img {
     transition: all 0.2s linear;
 }
-.view-first .mask {
+.green .mask {
     opacity: 0;
     background-color: rgba(59, 192, 199, 0.7);
+    transition: all 0.4s ease-in-out;
+}
+.orange .mask {
+    opacity: 0;
+    background-color: rgba(253, 193, 67, 0.7);
     transition: all 0.4s ease-in-out;
 }
 .view-first h2 {
@@ -322,7 +334,10 @@ nav a {
 .view-first:hover img {
     transform: scale(1.1);
 }
-.view-first:hover .mask {
+.green:hover .mask {
+    opacity: 1;
+}
+.orange:hover .mask {
     opacity: 1;
 }
 .view-first:hover h2,
@@ -336,4 +351,35 @@ nav a {
 }
 .view-first:hover a.info {
     transition-delay: 0.2s;
+}
+
+/* 画面外にいる状態 */
+.fadein {
+    opacity: 0.1;
+    transform: translate(0, 120px);
+    transition: all 0.8s;
+}
+.fadein2 {
+    opacity: 0.1;
+    transform: translate(0, 120px);
+    transition: all 1s;
+}
+.fadein3 {
+    opacity: 0.1;
+    transform: translate(0, 120px);
+    transition: all 1.5s;
+}
+
+/* 画面内に入った状態 */
+.fadein.scrollin {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.fadein2.scrollin {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.fadein3.scrollin {
+    opacity: 1;
+    transform: translate(0, 0);
 }

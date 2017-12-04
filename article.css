@@ -11,17 +11,17 @@ body {
 #header {
     top: 0;
     width: 100%;
-    height: 130px;
+    height: 100px;
     background-blend-mode: overlay;
     background: rgba(158, 170, 255, 0.1) url(triangular.png);
     padding: 0px 2%;
-    position: fixed;
+    position: absolute;
     overflow: hidden;
     z-index: 2;
 }
 
 .left-nav {
-    width: 48%;
+    width: 50%;
     float: left;
 }
 
@@ -31,32 +31,31 @@ h1 {
     display: block;
     font-weight: bold;
     /*太字に*/
-    font-size: 6em;
+    font-size: 5em;
     /*サイズ2倍*/
+    line-height: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 22px;
+    }
 }
 
 #header img {
-    width: 265px;
+    width: 200px;
     /* transform: translateX(360px); */
     filter: invert(100%);
-    margin-top: 40px;
-    margin-left: 360px;
+    margin-top: 30px;
+    margin-left: 310px;
     transform: rotate(-10deg);
 }
 
 .containernav {
-    height: 130px;
+    height: 100px;
     float: left;
-    width: 48%;
+    width: 44%;
 }
-
-
-/*
-      #header img {
-          width: 30%;
-          float: left;
-          filter: invert(100%);
-*/
 
 
 }
@@ -72,36 +71,79 @@ ul {
     overflow: hidden;
 }
 nav li {
-    line-height: 130px;
+    line-height: 100px;
     width: 20%;
     list-style-type: none;
     float: left;
     display: block;
-    text-align: center;
+    text-align: right;
+}
+nav li a:hover {
+    color: #81E2DF;
 }
 nav a {
-    font-size: 25px;
+    font-size: 35px;
     text-decoration: none;
     color: #f9f9f9;
+    font-weight: 700;
 }
 .containernarrow {
-    width: 1000px;
+    width: 800px;
     margin: 0 auto;
     overflow: hidden;
     padding: 16px;
 }
 .toptitle {
-    font-size: 55px;
+    font-size: 45px;
     padding-left: 8px;
-    color: #696969;
+    color: rgb(105, 105, 105);
     font-weight: 400;
     text-align: center;
 }
 .amatic {
     font-family: 'Amatic SC', cursive;
 }
-.mainvidual p {
-    font-size: 100px;
-    text-align: center;
-    transform: translateY(200px);
+.line:first-child {
+    /* margin-top: 50px; */
+}
+.line img {
+    width: 200px;
+    display: block;
+    filter: invert(40%);
+    margin: auto;
+}
+.article-title {
+    font-size: 1.8em;
+    text-align: left;
+    transform: translateY(110px);
+    background: url(line01.png) repeat-x bottom;
+}
+p {
+    font-size: 1em;
+    margin: 10px 0px;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    margin: 0.7em 0px;
+    line-height: 1.75
+}
+.eyecatch {
+    margin-top: 130px;
+}
+h3 {
+    position: relative;
+    border: none;
+    font-size: 1.25em;
+    padding: 1em 1.1em;
+    margin-top: 2.1em;
+    margin-bottom: 1em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #3BC0C7;
+    color: #fff;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.25) inset;
 }
